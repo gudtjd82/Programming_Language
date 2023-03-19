@@ -80,10 +80,9 @@ List<int> reverse_list(List<int> xs) {
       // Hint: res contains temporary (and final) result.
         if(_xs.isEmpty())
             return _res;
-        else
-        {
-            _res.cons(_res, reverse_list(_xs.tail())); 
-            
+        else{
+            _res = cons(_xs.head(), _res);
+            return rev_aux(_xs.tail(), _res);
         }
     };
     List<int> res;
